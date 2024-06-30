@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         gridContainer.appendChild(gridItem);
       }
     }
-    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 50px)`; // Sütun genişliği ayarı
+    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 20px)`; // Sütun genişliği ayarı
+    gridContainer.style.gridTemplateRows = `repeat(${rows}, 20px)`; // Satır yüksekliği ayarı
   }
 
-  // Varsayılan olarak 10x10 bir ızgara oluştur
+  // Varsayılan olarak 32x32 bir ızgara oluştur
   createGrid(32, 32);
 
   // Kalem aracı seçildiğinde
@@ -63,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const rows = parseInt(rowInput.value);
     const cols = parseInt(colInput.value);
     
-    if (rows >= 1 && cols >= 1 && rows <= 128 && cols <= 128) { // Geçerli bir aralık kontrolü yapın
+    if (rows >= 1 && cols >= 1 && rows <= 100 && cols <= 100) { // Geçerli bir aralık kontrolü yapın
       createGrid(rows, cols);
     } else {
-      alert('Satır ve sütun sayısı 1 ile 18 arasında olmalıdır.');
+      alert('Satır ve sütun sayısı 1 ile 100 arasında olmalıdır.');
     }
   });
 
