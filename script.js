@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Varsayılan olarak 10x10 bir ızgara oluştur
-  createGrid(10, 10);
+  createGrid(32, 32);
 
   // Kalem aracı seçildiğinde
   penTool.addEventListener('click', function() {
