@@ -63,10 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const rows = parseInt(rowInput.value);
     const cols = parseInt(colInput.value);
     
-    if (rows >= 1 && cols >= 1 && rows <= 20 && cols <= 20) { // Geçerli bir aralık kontrolü yapın
+    if (rows >= 1 && cols >= 1 && rows <= 128 && cols <= 128) { // Geçerli bir aralık kontrolü yapın
       createGrid(rows, cols);
     } else {
-      alert('Satır ve sütun sayısı 1 ile 20 arasında olmalıdır.');
+      alert('Satır ve sütun sayısı 1 ile 18 arasında olmalıdır.');
     }
   });
 
