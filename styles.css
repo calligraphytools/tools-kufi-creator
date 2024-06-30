@@ -1,33 +1,55 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #ddd;
+  min-width: 200px;
 }
 
 .toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
 .tool {
-  margin-right: 10px;
+  margin-bottom: 10px;
   padding: 8px 16px;
   border: none;
   cursor: pointer;
+  width: 100%;
 }
 
 .tool.active {
   background-color: #ccc;
 }
 
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(32, 20px); /* 32 sütunlu ızgara */
-  grid-template-rows: repeat(32, 20px); /* 32 satırlı ızgara */
-  grid-gap: 1px; /* Çizgi arası boşluk */
+  grid-template-columns: repeat(32, 20px);
+  grid-template-rows: repeat(32, 20px);
+  grid-gap: 1px;
   border: 1px solid #333;
 }
 
