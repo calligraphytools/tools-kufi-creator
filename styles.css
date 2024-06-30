@@ -25,14 +25,14 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(10, 50px); /* Örnek: 10 sütunlu bir ızgara */
+  grid-template-columns: repeat(32, 20px); /* 32 sütunlu ızgara */
+  grid-template-rows: repeat(32, 20px); /* 32 satırlı ızgara */
   grid-gap: 1px; /* Çizgi arası boşluk */
   border: 1px solid #333;
 }
 
 .grid-item {
   width: 100%;
-  height: 50px; /* Örnek: Kare boyutu */
+  height: 100%;
   background-color: #fff;
 }
-
