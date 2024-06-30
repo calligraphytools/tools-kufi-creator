@@ -1,15 +1,22 @@
 body {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
 }
 
-.sidebar {
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.toolbar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,13 +24,6 @@ body {
   padding: 20px;
   background-color: #ddd;
   min-width: 200px;
-}
-
-.toolbar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
 }
 
 .tool {
