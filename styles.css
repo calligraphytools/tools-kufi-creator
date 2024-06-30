@@ -10,10 +10,14 @@ body {
 
 .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 80%;
-  max-width: 1200px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ddd;
 }
 
 .toolbar {
@@ -21,9 +25,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 20px;
-  background-color: #ddd;
-  min-width: 200px;
+  margin-bottom: 20px;
 }
 
 .tool {
@@ -39,7 +41,6 @@ body {
 }
 
 .main-content {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,4 +58,29 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fff;
+}
+
+/* Responsive tasarım için eklenen media query */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .toolbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tool {
+    margin: 5px;
+    width: auto;
+  }
+
+  .main-content {
+    overflow-x: auto; /* İçerik taşma durumunda yatay kaydırma sağlar */
+  }
+
+  .grid-container {
+    max-width: 90vw; /* İçeriği ekrana sığdırmak için maksimum genişlik ayarı */
+  }
 }
