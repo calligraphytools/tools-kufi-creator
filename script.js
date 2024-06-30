@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const eraserTool = document.getElementById('eraserTool');
   const colorPicker = document.getElementById('colorPicker');
   const saveButton = document.getElementById('saveButton');
+  const rowInput = document.getElementById('rowInput');
+  const colInput = document.getElementById('colInput');
+  const resizeButton = document.getElementById('resizeButton');
 
   let currentTool = 'pen'; // Varsayılan kalem aracı
 
@@ -53,6 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
     currentTool = 'pen'; // Renk seçildiğinde varsayılan kalem aracı kullanılsın
     penTool.classList.add('active');
     eraserTool.classList.remove('active');
+  });
+
+  // Izgara boyutunu değiştirme butonuna basıldığında
+  resizeButton.addEventListener('click', function() {
+    const rows = parseInt(rowInput.value);
+    const cols = parseInt(colInput.value);
+    
+    if (rows >= 1 && cols >= 1 && rows <= 20 && cols <= 20) { // Geçerli bir aralık kontrolü yapın
+      createGrid(rows, cols);
+    } else {
+      alert('Satır ve sütun sayısı 1 ile 20 arasında olmalıdır.');
+    }
   });
 
   // Kaydetme butonuna basıldığında
